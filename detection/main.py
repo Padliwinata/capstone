@@ -89,5 +89,16 @@ def before_index(
     lvgi = ((long_term_debt_2 + current_liabilities_2) / total_asset_2) / ((long_term_debt_1 + current_liabilities_1) / total_asset_1)
     tata = ((current_assets_2 - current_assets_1) - (cash_2 - cash_1) - ((current_liabilities_2 - current_liabilities_1) - (current_maturities_of_ltd_2 - current_maturities_of_ltd_1) - (income_tax_payable_2 - income_tax_payable_1) - depreciation_and_amortization_2)) / total_asset_2
     result = -4.84 + (0.920 * dsri) + (0.528 * gmi) + (0.404 * aqi) + (0.892 * sgi) + (0.115 * depi) - (0.172 * sgai) - (0.327 * lvgi) + (4.679 * tata)
-    return result
+    data = {
+        "dsri": dsri,
+        "gmi": gmi,
+        "aqi": aqi,
+        "sgi": sgi,
+        "depi": depi,
+        "sgai": sgai,
+        "lvgi": lvgi,
+        "tata": tata,
+        "result": result
+    }
+    return data
 
